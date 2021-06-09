@@ -23,6 +23,17 @@ module.exports = {
         respectDNT: true,
       },
     },
+    module.exports = {
+      plugins: [
+        // You can should only have one instance of this plugin
+        {
+          resolve: `gatsby-plugin-netlify-identity`,
+          options: {
+            url: `https://court-finder.netlify.com/` // required!
+          }
+        }
+      ]
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
