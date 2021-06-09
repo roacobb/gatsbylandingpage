@@ -27,20 +27,33 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            <Subtitle>Locate any public basketball court instantly</Subtitle>
             <h1>
-              All your money,
+              All public ball courts,
               <br />
-              one account
+              one app
             </h1>
             <h2>
               We're building next generation personal finance tools. Sign up to
               get early access.
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
-            </HeaderForm>
+            <HeaderForm
+              name="early-access"
+              method="post"
+              data-netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="early-access" />
+           <HeaderInput
+             type="email"
+             placeholder="Your email"
+             name="email"
+             id="email"
+             required
+          />
+  <HeaderButton>Early access</HeaderButton>
+</HeaderForm>
             <FormSubtitle>
               Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
