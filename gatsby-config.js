@@ -29,7 +29,7 @@ module.exports = {
         {
           resolve: `gatsby-plugin-netlify-identity`,
           options: {
-            url: `http://court-finder.netlify.com/` // required!
+            url: `court-finder.netlify.com` // required!
           }
         }
       ]
